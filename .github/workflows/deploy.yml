@@ -36,8 +36,11 @@ jobs:
           preRelease: true
           tarBall: false
           zipBall: false
-      - name: Unpack files
-        run: unzip -o graphite-self-hosted-build.zip -d app
+          extract: true
+      - name: Fix filename
+        run: |
+          mkdir -p app
+          mv graphite*/* app
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
