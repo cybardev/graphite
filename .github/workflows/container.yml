@@ -2,8 +2,10 @@ name: Publish Container to GitHub Container Registry
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+    paths:
+      - ".github/workflows/container.yml"
+      - Dockerfile
 
   # Allows running this workflow from GitHub Actions tab
   workflow_dispatch:
