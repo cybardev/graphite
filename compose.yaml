@@ -1,0 +1,6 @@
+# service for dev testing
+services:
+  graphite:
+    build: .
+    ports:
+      - "8080:8080"
