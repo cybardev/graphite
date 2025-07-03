@@ -1,6 +1,6 @@
-FROM alpine:3.22 AS main
+FROM debian:12-slim AS main
 WORKDIR /app
-RUN apk add --no-cache unzip curl
+RUN apt-get update && apt-get install -y unzip curl && rm -rf /var/lib/apt/lists/*
 
 # download and extract Graphite
 RUN curl -L -o graphite.zip https://github.com/GraphiteEditor/Graphite/releases/download/latest-stable/graphite-self-hosted-build.zip && \
