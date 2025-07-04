@@ -8,3 +8,5 @@ services:
     runtime: image
     image:
       url: ghcr.io/cybardev/graphite:main
+    domains:
+      - gfx.cybar.dev
